@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+
 {% load static %}
 <html lang="en">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Corona Admin</title>
+    <title> AMUSEMENT PARK </title>
     <!-- plugins:css -->
     <link rel="stylesheet" href=" {% static 'assets/vendors/mdi/css/materialdesignicons.min.css' %} ">
     <link rel="stylesheet" href=" {% static 'assets/vendors/css/vendor.bundle.base.css' %} ">
@@ -173,7 +174,7 @@
         <!-- partial:partials/_navbar.html -->
         <nav class="navbar p-0 fixed-top d-flex flex-row">
           <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
-            <a class="navbar-brand brand-logo-mini" href=" {% static 'index.html' %} "><img src=" {% static 'assets/images/logo-mini.svg' %} " alt="logo" /></a>
+            <a class="navbar-brand brand-logo-mini" href=" {% static 'index.html' %} ">   </a>
           </div>
           <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
             <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -188,7 +189,7 @@
             </ul>
             <ul class="navbar-nav navbar-nav-right">
               <li class="nav-item dropdown d-none d-lg-block">
-                <a class="nav-link btn btn-success create-new-button" id="createbuttonDropdown" data-toggle="dropdown" aria-expanded="false" href="#">+ Create New Project</a>
+                <a class="nav-link btn btn-success create-new-button" id="createbuttonDropdown" data-toggle="dropdown" aria-expanded="false" href="#">submit </a>
                 <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="createbuttonDropdown">
                   <h6 class="p-3 mb-0">Projects</h6>
                   <div class="dropdown-divider"></div>
@@ -662,7 +663,9 @@
               <div class="col-12 grid-margin">
                 <div class="card">
                   <div class="card-body">
+                    {% block content %}
                     <h4 class="card-title"> Welcome !</h4>
+                    {% endblock %}
 <!--                    <div class="table-responsive">-->
 <!--                      <table class="table">-->
 <!--                        <thead>-->

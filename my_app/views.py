@@ -1,5 +1,8 @@
 from django.shortcuts import render
 
+from my_app.forms import gamesForm
+
+
 # Create your views here.
 def home(request):
 
@@ -10,3 +13,8 @@ def index(request):
 
 def dash(request):
     return render(request,"dash.html")
+
+def gamesdata(request):
+    form =gamesForm()
+    print(form)
+    return render(request,'temp.html',{'form':form})

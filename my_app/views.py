@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 from my_app.forms import gamesForm
 from my_app.models import games
@@ -27,3 +27,16 @@ def gamesdata(request):
 def  games_view(request):
     data = games.objects.all()
     return render(request, 'view_data.html' , {'data': data})
+def games_delete(request,id):
+    data = games.objects.get(id=id)
+    data.delete()
+    return redirect("table")
+def games_update(request,id):
+    data = games.objects.get(id=id)
+    form = gamesForm(instance = data)
+    if request.method == 'POST':
+        data=gamesForm(request.POST,instance=data)
+        if data.is_valid():
+            data.save()
+            return redirect("table")
+    return render(request,'update.html',{'form':form})

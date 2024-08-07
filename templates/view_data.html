@@ -9,6 +9,9 @@
       <th scope="col"> price </th>
       <th scope="col"> timings </th>
       <th scope="col"> category </th>
+      <th scope="col"> Delete </th>
+      <th scope="col"> update </th>
+
     </tr>
   </thead>
   <tbody>
@@ -19,6 +22,15 @@
       <td>{{i.price}}</td>
       <td>{{i.timings}}</td>
       <td>{{i.category}}</td>
+      <td>
+        <form action="{% url 'delete' i.id %}" method="POST" >
+          {% csrf_token %}
+          <button type="submit"> Delete </button>
+        </form>
+      </td>
+      <td>
+        <a href = "{% url 'update' i.id %}" class="btn btn-danger">Update</a>
+      </td>
     </tr>
   </tbody>
   {% endfor %}

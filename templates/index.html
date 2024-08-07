@@ -78,7 +78,7 @@
                         <a class="btn btn-square btn-light rounded-circle mx-1" href=" {% static '' %} "><i class="fab fa-instagram"></i></a>
                         <a class="btn btn-square btn-light rounded-circle mx-1" href=" {% static '' %} "><i class="fab fa-linkedin-in"></i></a>
                     </div>
-                    <a href="#" class="btn btn-primary rounded-pill py-2 px-4 flex-shrink-0">Get Started</a>
+                    <a href="{% url 'data' %}" class="btn btn-primary rounded-pill py-2 px-4 flex-shrink-0"> Add Rides </a>
                 </div>
             </nav>
         </div>
@@ -98,7 +98,7 @@
                                     <p class="mb-4 fs-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy... 
                                     </p>
                                     <div class="d-flex flex-shrink-0">
-                                        <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="#">Our Packages</a>
+                                        <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="#"> View Rides </a>
                                     </div>
                                 </div>
                             </div>
@@ -153,7 +153,7 @@
                                     <p class="mb-4 fs-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy... 
                                     </p>
                                     <div class="d-flex flex-shrink-0">
-                                        <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="#">Our Packages</a>
+                                        <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="{% url 'table' %}"> Ride Details </a>
                                     </div>
                                 </div>
                             </div>

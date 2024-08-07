@@ -1,6 +1,7 @@
 from django.shortcuts import render
 
 from my_app.forms import gamesForm
+from my_app.models import games
 
 
 # Create your views here.
@@ -16,5 +17,13 @@ def dash(request):
 
 def gamesdata(request):
     form =gamesForm()
-    print(form)
+    if request.method == 'POST':
+        data=gamesForm(request.POST)
+        if data.is_valid():
+            data.save()
+
     return render(request,'temp.html',{'form':form})
+
+def  games_view(request):
+    data = games.objects.all()
+    return render(request, 'view_data.html' , {'data': data})
